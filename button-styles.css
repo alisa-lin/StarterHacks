@@ -1,0 +1,26 @@
+/* button-styles.css
+ * customize style of buttons for InputPanel
+ */
+
+.label {
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 30px;
+}
+
+.button {
+	-fx-text-fill: white;
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 30px;
+	-fx-background-color: #ec1c68;
+	-fx-pref-height: 28px;
+    -fx-pref-width: 200px;
+}
+
+.text-field {
+	-fx-font-size: 25px;
+}
+
+.button:hover {
+	-fx-background-color: #cc155f;
+}
+

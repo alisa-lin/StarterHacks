@@ -1,0 +1,19 @@
+/* error-message.css
+ * customize error message
+ */
+
+ .label {
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 25px;
+}
+
+.button {
+	-fx-text-fill: white;
+	-fx-font-family: "Trebuchet MS";
+	-fx-font-size: 25px;
+	-fx-background-color: #ec1c68;
+}
+
+.button:hover {
+	-fx-background-color: #cc155f;
+}
