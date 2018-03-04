@@ -1,0 +1,16 @@
+5
+
+triangles/blue1.png
+triangles/blue2.png
+
+triangles/green1.png
+triangles/green2.png
+
+triangles/pink1.png
+triangles/pink2.png
+
+triangles/orange1.png
+triangles/orange2.png
+
+triangles/yellow1.png
+triangles/yellow2.png
