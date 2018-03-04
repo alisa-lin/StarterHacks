@@ -23,9 +23,11 @@ public class GraphicsPanel extends JPanel {
 	JButton backButton, saveButton;
 	JPanel sidePanel, legendPanel;
 	SpringLayout sidePanelLayout = new SpringLayout();
+	DisplayTriangles frame;
 
-	public GraphicsPanel () {
-		dataManager = new DataManager("data.txt");
+	public GraphicsPanel (DataManager dataManager, DisplayTriangles frame) {
+		this.dataManager = dataManager;
+		this.frame = frame;
 		setLayout(layout);
 		setBackground(backgroundColour);
 		loadTriangleImages();
@@ -161,7 +163,7 @@ public class GraphicsPanel extends JPanel {
 		// add save button
 		saveButton = new JButton("Save");
 		saveButton.addActionListener(__ -> {
-			//String inputValue = JOptionPane.showInputDialog(null, "Enter a name for your Triangles\ngraphic: ", "Name Your Graphic", JOptionPane.INFORMATION_MESSAGE);
+			String inputValue = JOptionPane.showInputDialog(null, "Enter a name for your Triangles graphic: ", "Name Your Graphic", JOptionPane.INFORMATION_MESSAGE);
 		});
 		saveButton.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent evt) {
@@ -183,9 +185,9 @@ public class GraphicsPanel extends JPanel {
 		sidePanelLayout.putConstraint(SpringLayout.EAST, saveButton, 0, SpringLayout.EAST, legendPanel);
 
 		// add back button
-		backButton = new JButton("Back");
+		backButton = new JButton("Close");
 		backButton.addActionListener(__ -> {
-			System.out.println("run");
+			frame.closeWindow();
 		});
 		backButton.addMouseListener(new MouseAdapter() {
 			public void mouseEntered(MouseEvent evt) {

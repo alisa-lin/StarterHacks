@@ -21,6 +21,8 @@ public class InputPanel extends Application {
 	GridPane root = new GridPane();
 	TextField label[] = new TextField[6];
 	TextField tally[] = new TextField[6];
+	public DataManager dataManager = new DataManager();
+	DisplayTriangles display;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -64,13 +66,16 @@ public class InputPanel extends Application {
 	    Button submit = new Button("Submit");
 	    GridPane.setHalignment(submit, HPos.RIGHT);
 	    submit.setOnAction(e -> {
-	    	if (contentExists()) {
-	    		if (allValues()) {
-	    			for (int j = 0; j < i; j++) {
-	    				Data data = new Data(label[j], tally[j]);
-	    				DataManager.addData(data);
-	    			}
+	    	if (contentExists() && allValues()) {
+	    		if (display != null) {
+	    			display.closeWindow();
 	    		}
+	    		dataManager.clear();
+    			for (int j = 0; j < i; j++) {
+    				Data data = new Data(label[j].getText(), Integer.parseInt(tally[j].getText()));
+    				dataManager.addData(data);
+    			}
+	    		display = new DisplayTriangles(dataManager);
 	    	}
 	    });
 
@@ -197,7 +202,7 @@ public class InputPanel extends Application {
 	    });
 	}
 
-	public static void main(String[] args) {
-	    launch(args);
+	public static void main (String[] args) {
+		launch(args);
 	}
 }

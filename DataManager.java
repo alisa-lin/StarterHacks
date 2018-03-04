@@ -53,6 +53,10 @@ public class DataManager {
 		return false;
 	}
 
+	public void clear () {
+		dataList.clear();
+	}
+
 	public ArrayList<String> getLabelList () {
 		ArrayList<String> labels = new ArrayList<>();
 		for (Data data : dataList) {
@@ -83,6 +87,13 @@ public class DataManager {
 			triangleCount.remove(triangleCount.size()-1);
 			triangleCount.add(temp-1);
 			triangleSum--;
+		}
+
+		while (triangleSum < NUM_TRIANGLES) {
+			int temp = triangleCount.get(triangleCount.size()-1);
+			triangleCount.remove(triangleCount.size()-1);
+			triangleCount.add(temp+1);
+			triangleSum++;
 		}
 	}
 
