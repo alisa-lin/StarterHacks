@@ -2,10 +2,6 @@
 
 Java application that takes in user-inputted data and turns it into a triangle-based graphic. Created in under 24 hours for StarterHacks 2018. Winner of the Best Design Award.
 
-### Screenshots
-![Input Panel](https://i.imgur.com/GGvj33o.png)
-![Graphics Panel](https://i.imgur.com/VDlz289.png)
-
 ## How to use Triangles
 
 ### Running the application
@@ -37,6 +33,10 @@ Clicking the "close" button on the second window will close the second window on
 * [**Alice Cai**](https://github.com/alice-cai)
 * [**Alisa Lin**](https://github.com/alisa-lin)
 * [**Ordenica Wu**](https://github.com/Ordencia)
+
+## Screenshots
+![Input Panel](https://i.imgur.com/GGvj33o.png)
+![Graphics Panel](https://i.imgur.com/VDlz289.png)
 
 ## Last comments
 
