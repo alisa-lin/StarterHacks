@@ -2,6 +2,10 @@
 
 Java application that takes in user-inputted data and turns it into a triangle-based graphic. Created in under 24 hours for StarterHacks 2018. Winner of the Best Design Award.
 
+### Screenshots
+![Input Panel](https://i.imgur.com/GGvj33o.png)
+![Graphics Panel](https://i.imgur.com/VDlz289.png)
+
 ## How to use Triangles
 
 ### Running the application
@@ -18,7 +22,9 @@ Clicking the "close" button on the second window will close the second window on
 
 ### A few quirks
 
-Because this was created for a hackathon, not all desired features were successfully implemented. The "save" button on the second window only prompts the user for a title for the graphic. It does not do anything with this information. We did not have the time to create a database to store this and another panel to display previously saved graphics.
+* Because this was created for a hackathon, not all desired features were successfully implemented. The "save" button on the second window only prompts the user for a title for the graphic. It does not do anything with this information. We did not have the time to create a database to store this and another panel to display previously saved graphics.
+
+* If you close either window after pressing save and without closing the popup window, it will generate an error as the application closes. There are likely other scenarios as well in which closing the application will generate an error.
 
 ## Credits
 ### Created using
